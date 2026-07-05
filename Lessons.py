@@ -1,3 +1,5 @@
+from Exresice import lesson
+
 lessons_list = []
 
 while True:
@@ -59,10 +61,10 @@ while True:
         for lesson in lessons_list:
             if lesson["teacher"] == teacher_name:
                 lesson = {
-                    "code": code,
-                    "title": title,
-                    "teacher": teacher,
-                    "unit": unit
+                    "code": lesson["code"],
+                    "title": lesson["title"],
+                    "teacher": lesson["teacher"],
+                    "unit": lesson["unit"]
                 }
 
                 print(f"{lesson['title']:10}" + "by " + f"{lesson['teacher']:10}" + f"{lesson['unit']:3}")
