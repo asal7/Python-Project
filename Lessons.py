@@ -1,5 +1,3 @@
-from Exresice import lesson
-
 lessons_list = []
 
 while True:
