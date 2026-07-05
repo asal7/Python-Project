@@ -1,5 +1,3 @@
-from ParkingManagement import parking_list
-
 Parking_List = []
 while True:
     print("1: Enter to Parking ")
