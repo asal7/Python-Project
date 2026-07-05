@@ -43,7 +43,7 @@ while True:
             found = False
             for car in Parking_List:
                 if car['Plate'] == Car_Plate:
-                    print(f"{Car_Info['Plate']:10}" "has been found in the parking list.")
+                    print(f"{car['Plate']:10}" "has been found in the parking list.")
                     found = True
                     break
             if not found:
