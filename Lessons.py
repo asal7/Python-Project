@@ -1,3 +1,4 @@
+my_file = open("LessonsList.txt","a+")
 lessons_list = []
 
 while True:
@@ -34,17 +35,24 @@ while True:
             lesson = {"code": code, "title": title, "teacher": teacher, "unit": unit}
             print(lesson)
             lessons_list.append(lesson)
+            my_file.write(str(lesson) + "\n")
             print("Lesson added successfully.")
 
     elif option == "2":
+        # Printing lesson list from my_file
+        my_file.seek(0)
+        all_lessons = my_file.readlines()
+        for lesson in all_lessons:
+            print(lesson.strip())
+
+        #Normal printing lesson list
         if len(lessons_list) == 0:
             print("No Lessons!")
             continue
 
-        total_units = 0
         print("Lessons List")
         print("---------------------------------------------")
-
+        total_units = 0
         for lesson in lessons_list:
             print(f"Title: {lesson['title']}, teacher: {lesson['teacher']}, unit: {lesson['unit']}")
 
@@ -73,13 +81,12 @@ while True:
     elif option == "0":
         print("Exiting ...")
         break
-
     else:
         print("Invalid option")
 
     print("---------------------------------------------")
 
-
+my_file.close()
 
 
 
