@@ -19,7 +19,7 @@ def save_click():
 
     id.set(id.get() + 1)
     name.set("")
-    quantity.set(0)
+    quantity.set(1)
     price.set(0)
 
 window = Tk()
