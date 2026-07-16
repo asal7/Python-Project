@@ -26,9 +26,9 @@ else:
     lessons_list.append(new_lesson)
     print("Lesson added successfully!")
 
-def sort_lessonName(lesson):
+def sort_lesson_name(lesson):
     return lesson["name"]
-sorted_lesson = sorted(lessons_list, key=sort_lessonName)
+sorted_lesson = sorted(lessons_list, key=sort_lesson_name)
 for lesson in sorted_lesson:
     #print(lesson)
     print(f"{lesson['id']:3}" + "-" + f"{lesson['name']:5}" + "-" + f"{lesson['unit']:3}")
